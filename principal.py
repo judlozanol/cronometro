@@ -1,7 +1,13 @@
 from cronometro import Cronometro
 
 c= Cronometro()
-for i in range(5000):
+h,m,s=str(input("Ingrese las horas, minutos y segundos que desea contar respectivamente separados por un espacio (hh mm ss):\n")).split(" ")
+h=int(h)
+m=int(m)
+s=int(s)
+s= s + (h*3600) + (m*60)
+input("\nPresione enter para iniciar el conteo...")
+for i in range(s+1):
     if c.segundo.valor//10==0:
         if c.minuto.valor//10==0:
             if c.hora.valor//10==0:
